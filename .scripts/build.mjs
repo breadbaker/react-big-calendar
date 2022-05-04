@@ -33,5 +33,5 @@ await $`sass ./lib/addons/dragAndDrop/styles.scss ./lib/addons/dragAndDrop/style
 console.log(chalk.blue('Post process all CSS'))
 // We do not use postcss to process SASS, as it's
 // SASS processor still uses node-sass by default
-await $`postcss -r ./lib/**/*.css`
+// await $`postcss -r ./lib/**/*.css`
 console.log(chalk.blue('[BUILD COMPLETE]'))
