@@ -40,9 +40,6 @@
     "test": "yarn lint && NODE_ENV=test jest",
     "tdd": "NODE_ENV=test jest --watch"
   },
-  "precommit": [
-    "build"
-  ],
   "peerDependencies": {
     "moment": "^2.29.1",
     "react": "^16.14.0 || ^17",
