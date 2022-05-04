@@ -7,12 +7,14 @@ export default [
     allDay: true,
     start: new Date(2015, 3, 0),
     end: new Date(2015, 3, 1),
+    backgroundColor: 'purple',
   },
   {
     id: 1,
     title: 'Long Event',
     start: new Date(2015, 3, 7),
     end: new Date(2015, 3, 10),
+    backgroundColor:'green',
   },
 
   {

@@ -2,6 +2,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import clsx from 'clsx'
 
+import styled from 'styled-components';
+
+
 class EventCell extends React.Component {
   render() {
     let {
@@ -58,9 +61,17 @@ class EventCell extends React.Component {
       </div>
     )
 
+    const EventStyleWrap = styled.div`
+      background-color: ${event.backgroundColor || '#3174ad'};
+      &.rbc-selected {
+        background-color: darken(${event.backgroundColor || '#3174ad'}, 10%);
+      }
+    `;
+
+
     return (
       <EventWrapper {...this.props} type="date">
-        <div
+        <EventStyleWrap
           {...props}
           tabIndex={0}
           style={{ ...userProps.style, ...style }}
@@ -75,7 +86,7 @@ class EventCell extends React.Component {
           onKeyPress={(e) => onKeyPress && onKeyPress(event, e)}
         >
           {typeof children === 'function' ? children(content) : content}
-        </div>
+        </EventStyleWrap>
       </EventWrapper>
     )
   }
